@@ -6,7 +6,7 @@
   <arg name="y" default="0"/>
   <arg name="z" default="0.03"/>
   <arg name="yaw" default="0"/>
-  <arg name="turn_scale" default="1.0"/>
+  <arg name="turn_scale" default="2.0"/>
   <env name="GAZEBO_PLUGIN_PATH" value="$(optenv GAZEBO_PLUGIN_PATH):$(optenv LD_LIBRARY_PATH)"/>
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
     <arg name="world_name" value="$(arg world)"/>

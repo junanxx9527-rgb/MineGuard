@@ -4,7 +4,7 @@
   <arg name="y" default="0"/>
   <arg name="z" default="0.03"/>
   <arg name="yaw" default="0"/>
-  <arg name="turn_scale" default="1.0"/>
+  <arg name="turn_scale" default="2.0"/>
   <param name="mineguard/course_turn_scale" value="$(arg turn_scale)" type="double"/>
   <group ns="mineguard">
     <param name="robot_description" textfile="$(find mineguard_robot)/urdf/mineguard_c1.urdf"/>

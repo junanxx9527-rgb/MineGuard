@@ -35,6 +35,8 @@ roslaunch mineguard_robot spawn.launch x:=1.0 y:=0.5 z:=0.03 yaw:=0.0
 
 坐标单位为米，偏航角为弧度。选择无碰撞的出生点，并按场景地面高度调整 `z`。ROS 话题固定在 `/mineguard`，TF 帧名固定，因此默认同一 ROS Master 下运行一台 C1。修改 `model_name` 只改变 Gazebo 实体名称。
 
+本包使用课程版 C1 的 13 个车身网格和滑移转向驱动。两个启动入口默认采用课程实测配置 `turn_scale:=2.0`。如果自有场景的地面摩擦不同，可通过 `turn_scale` 调整转向命令到目标轮速的换算倍率，驱动接受 1.0 至 2.5。
+
 ## 简单走车 · Send a velocity command
 
 在有空地的仿真场景中，持续发送低速前进命令。用 Ctrl+C 结束发送，插件在约 0.4 仿真秒未收到命令后把目标速度归零。
